@@ -164,8 +164,8 @@ The project includes a sample **STUDENT** table with the following structure:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd SQL
+   git clone https://github.com/Syam-1133/LangChain-SQL-Database-Chat-Application?tab=readme-ov-file
+
    ```
 
 2. **Install dependencies**
