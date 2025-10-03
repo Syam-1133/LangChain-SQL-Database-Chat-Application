@@ -107,7 +107,7 @@ The project includes a sample **STUDENT** table with the following structure:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Syam-1133/LangChain-SQL-Database-Chat-Application
    cd SQL
    ```
 
