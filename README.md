@@ -1,19 +1,233 @@
 <div align="center">
 
-# 🦜 LangChain SQL Database Chat Application
+# 🗄️ SQL Assistant Pro
 
-![LangChain](https://img.shields.io/badge/🦜_LangChain-Framework-blue?style=for-the-badge&logo=chainlink&logoColor=white)
+![SQL Assistant Pro](https://img.shields.io/badge/SQL_Assistant-Pro-blue?style=for-the-badge&logo=database&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/🦜_LangChain-Framework-blue?style=for-the-badge&logo=chainlink&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-AI_Powered-orange?style=for-the-badge&logo=openai&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/Syam-1133/AI-Hand-Gesture-Controlled-Mouse?style=for-the-badge&logo=github)
-![Forks](https://img.shields.io/github/forks/Syam-1133/AI-Hand-Gesture-Controlled-Mouse?style=for-the-badge&logo=github)
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Chat+with+SQL+Database;Natural+Language+to+SQL;AI+Powered+Database+Queries;Built+with+LangChain+%26+Groq" alt="Typing SVG" />
+## 🎯 Overview
+
+**SQL Assistant Pro** is an advanced, AI-powered database query interface that transforms natural language into SQL queries. Built with Streamlit, LangChain, and Groq's lightning-fast AI models, it provides an intuitive way to interact with your databases through conversational AI.
+
+## ✨ New Features (v2.0)
+
+### 🎨 **Enhanced UI/UX**
+- Modern gradient design with custom CSS styling
+- Responsive layout with organized sections
+- Interactive cards and enhanced visual elements
+- Professional color scheme and typography
+
+### 🔐 **Simplified Authentication**
+- **Environment-only API key management** - No more manual entry!
+- Automatic API key validation from environment variables
+- Secure configuration with `.env` file support
+
+### 📊 **Advanced Analytics & Visualization**
+- **Interactive data visualizations** with Plotly charts
+- **Automatic chart generation** for numeric data
+- **Performance metrics** tracking query execution time
+- **Session statistics** showing query count and database info
+
+### 🗂️ **Database Schema Explorer**
+- **Interactive schema viewer** in the sidebar
+- **Table structure display** with expandable sections
+- **Real-time schema information** for better query writing
+
+### 💡 **Smart Query Features**
+- **Intelligent query suggestions** based on database schema
+- **Query history management** with easy reuse functionality
+- **Sample query generator** for quick database exploration
+- **Auto-complete friendly** query patterns
+
+### 📤 **Export & Download**
+- **CSV export functionality** for query results
+- **Downloadable result sets** with timestamp naming
+- **Data persistence** across session
+
+### 🎛️ **Enhanced Control Panel**
+- **Comprehensive sidebar** with all tools organized
+- **One-click actions** for common operations
+- **History management** with clear options
+- **Connection status indicators**
+
+## 🚀 Quick Start
+
+### 1. **Clone the Repository**
+```bash
+git clone <your-repository-url>
+cd SQL
+```
+
+### 2. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### 3. **Set Up Environment Variables**
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env file and add your Groq API key
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 4. **Run the Application**
+```bash
+streamlit run main.py
+```
+
+## 🔧 Configuration
+
+### **Environment Variables**
+Create a `.env` file in the root directory:
+
+```env
+# Required
+GROQ_API_KEY=your_groq_api_key_here
+
+# Optional MySQL defaults
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=your_password
+MYSQL_DATABASE=your_database
+```
+
+### **Get Your Groq API Key**
+1. Visit [Groq Console](https://console.groq.com/keys)
+2. Sign up or log in to your account
+3. Generate a new API key
+4. Add it to your `.env` file
+
+## 🗄️ Database Support
+
+### **SQLite (Default)**
+- Uses `student.db` in the project directory
+- Read-only access for safety
+- Perfect for development and testing
+
+### **MySQL**
+- Full connection configuration through UI
+- Support for remote databases
+- Secure password handling
+
+## 🎯 Features Overview
+
+### **🤖 AI-Powered Querying**
+- Natural language to SQL conversion
+- Context-aware query understanding
+- Smart error handling and suggestions
+
+### **📊 Data Visualization**
+- Automatic chart generation for numeric data
+- Interactive Plotly visualizations
+- Histogram and scatter plot support
+
+### **📈 Performance Monitoring**
+- Query execution time tracking
+- Session metrics display
+- Database connection status
+
+### **🔍 Query Management**
+- History tracking (last 50 queries)
+- One-click query reuse
+- Sample query suggestions
+
+### **💾 Export Capabilities**
+- CSV download for query results
+- Timestamped file naming
+- Data preservation across sessions
+
+## 📱 Usage Examples
+
+### **Basic Queries**
+```
+"Show me all students"
+"How many students are in the database?"
+"Find students with grades above 90"
+```
+
+### **Advanced Queries**
+```
+"What's the average grade by subject?"
+"Show me the top 5 performing students"
+"Find students enrolled after 2020"
+```
+
+### **Analytics Queries**
+```
+"Generate a summary report of all courses"
+"Show grade distribution across subjects"
+"Find patterns in student performance"
+```
+
+## 🛠️ Technical Stack
+
+- **Frontend**: Streamlit with custom CSS
+- **AI/ML**: LangChain + Groq LLM (Llama-3.1-8b-instant)
+- **Databases**: SQLite, MySQL
+- **Visualization**: Plotly, Pandas
+- **Backend**: Python 3.8+
+
+## 🔒 Security Features
+
+- Environment-based API key management
+- Read-only database connections (SQLite)
+- Secure MySQL connection handling
+- No API keys stored in code or UI
+
+## 📋 Requirements
+
+See `requirements.txt` for full dependency list. Key packages:
+- `streamlit` - Web application framework
+- `langchain` - AI framework
+- `langchain-groq` - Groq LLM integration
+- `plotly` - Interactive visualizations
+- `pandas` - Data manipulation
+- `sqlalchemy` - Database abstraction
+
+## 🚀 Advanced Usage
+
+### **Custom Database Connection**
+Modify the `configure_db()` function to add support for other database types like PostgreSQL, Oracle, etc.
+
+### **Custom AI Models**
+Switch to different Groq models by changing the `model_name` parameter in the `ChatGroq` initialization.
+
+### **UI Customization**
+Modify the CSS in the `st.markdown()` sections to customize the appearance.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **LangChain** for the amazing AI framework
+- **Groq** for lightning-fast AI inference
+- **Streamlit** for the beautiful web framework
+- **Plotly** for interactive visualizations
+
+---
+
+<div align="center">
+<h3>🌟 Star this repository if you found it helpful! 🌟</h3>
+
+**Built with ❤️ by Syam**
+
+[![GitHub](https://img.shields.io/badge/GitHub-View_Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Syam-1133)
+</div>
 
 </div>
 
@@ -164,8 +378,8 @@ The project includes a sample **STUDENT** table with the following structure:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Syam-1133/LangChain-SQL-Database-Chat-Application?tab=readme-ov-file
-
+   git clone <repository-url>
+   cd SQL
    ```
 
 2. **Install dependencies**
